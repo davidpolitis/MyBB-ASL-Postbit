@@ -102,10 +102,10 @@ function asl_install()
 
     // Settings group array details
     $group = array(
-        'name' => 'asl',
-        'title' => $db->escape_string($lang->setting_group_asl),
+        'name'        => 'asl',
+        'title'       => $db->escape_string($lang->setting_group_asl),
         'description' => $db->escape_string($lang->setting_group_asl_desc),
-        'isdefault' => 0
+        'isdefault'   => 0
     );
 
     // Check if the group already exists.
@@ -132,17 +132,17 @@ function asl_install()
 
     // add settings
     $settings = array(
-        'displayage'	=> array(
-            'optionscode'	=> 'yesno',
-            'value'			=> 1
+        'displayage'      => array(
+            'optionscode' => 'yesno',
+            'value'       => 1
         ),
-        'displaysex'	=> array(
-            'optionscode'	=> 'yesno',
-            'value'			=> 1
+        'displaysex'      => array(
+            'optionscode' => 'yesno',
+            'value'       => 1
         ),
-        'displaycountry'	=> array(
-            'optionscode'	=> 'yesno',
-            'value'			=> 1
+        'displaycountry'  => array(
+            'optionscode' => 'yesno',
+            'value'       => 1
         )
     );
 
@@ -163,7 +163,7 @@ function asl_install()
         // Filter valid entries.
         $setting = array_intersect_key($setting,
             array(
-                'title' => 0,
+                'title'       => 0,
                 'description' => 0,
                 'optionscode' => 0,
                 'value' => 0,
@@ -177,9 +177,9 @@ function asl_install()
 
         $setting = array_merge(
             array('description' => '',
-                'optionscode' => 'yesno',
-                'value' => 0,
-                'disporder' => $disporder),
+                'optionscode'   => 'yesno',
+                'value'         => 0,
+                'disporder'     => $disporder),
             $setting);
 
         $setting['name'] = $db->escape_string($key);
@@ -231,15 +231,15 @@ function asl_install()
         }
 
         $countryfield = array(
-            "name" => $lang->asl_country_select_name,
+            "name"        => $lang->asl_country_select_name,
             "description" => $lang->asl_country_select_desc,
-            "disporder" => "0",
-            "type" => $countries,
-            "length" => "0",
-            "maxlength" => "0",
-            "profile" => "1",
-            "viewableby" => "-1",
-            "editableby" => "-1",
+            "disporder"   => "0",
+            "type"        => $countries,
+            "length"      => "0",
+            "maxlength"   => "0",
+            "profile"     => "1",
+            "viewableby"  => "-1",
+            "editableby"  => "-1",
         );
 
         $fid = $db->insert_query('profilefields', $countryfield);
