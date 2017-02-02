@@ -167,7 +167,8 @@ function asl_install()
                 'description' => 0,
                 'optionscode' => 0,
                 'value'       => 0,
-            ));
+            )
+        );
 
         // Escape input values.
         $setting = array_map(array($db, 'escape_string'), $setting);
@@ -179,8 +180,10 @@ function asl_install()
             array('description' => '',
                 'optionscode'   => 'yesno',
                 'value'         => 0,
-                'disporder'     => $disporder),
-            $setting);
+                'disporder'     => $disporder
+            ),
+            $setting
+        );
 
         $setting['name'] = $db->escape_string($key);
         $setting['gid'] = $gid;
