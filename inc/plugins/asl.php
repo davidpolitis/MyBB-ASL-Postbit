@@ -47,14 +47,14 @@ function asl_info()
      * codename: An unique code name to be used by updated from the official MyBB Mods community.
      */
     return array(
-        'name'			=> 'ASL Postbit',
-        'description'	=> $lang->asl_desc,
-        'website'		=> 'https://github.com/davidpolitis/',
-        'author'		=> 'David Politis',
-        'authorsite'	=> 'https://github.com/davidpolitis/',
-        'version'		=> '1.0',
-        'compatibility'	=> '18*',
-        'codename'		=> 'asl'
+        'name'          => 'ASL Postbit',
+        'description'   => $lang->asl_desc,
+        'website'       => 'https://github.com/davidpolitis/',
+        'author'        => 'David Politis',
+        'authorsite'    => 'https://github.com/davidpolitis/',
+        'version'       => '1.0',
+        'compatibility' => '18*',
+        'codename'      => 'asl'
     );
 }
 
