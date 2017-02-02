@@ -166,7 +166,7 @@ function asl_install()
                 'title'       => 0,
                 'description' => 0,
                 'optionscode' => 0,
-                'value' => 0,
+                'value'       => 0,
             ));
 
         // Escape input values.
